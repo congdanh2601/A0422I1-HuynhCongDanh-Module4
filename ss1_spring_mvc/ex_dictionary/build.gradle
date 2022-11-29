@@ -23,5 +23,4 @@ dependencies {
     implementation group: 'org.springframework', name: 'spring-web', version: '5.2.22.RELEASE'
     implementation group: 'org.springframework', name: 'spring-webmvc', version: '5.2.22.RELEASE'
     implementation group: 'javax.servlet', name: 'jstl', version: '1.2'
-    implementation group: 'org.webjars', name: 'bootstrap', version: '5.2.2'
 }

@@ -4,39 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9181c58a-c6e4-49b0-b0a8-a1e302cb93bd" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../../ss1_spring_mvc/ex_dictionary/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/runConfigurations.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/codegym/vn/config/AppConfiguration.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/codegym/vn/config/AppInitializer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/codegym/vn/controller/CalculatorController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/calculator/result.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../ex_sandwich_condiments/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../ex_sandwich_condiments/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../ex_sandwich_condiments/.idea/gradle.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../ex_sandwich_condiments/.idea/jarRepositories.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../ex_sandwich_condiments/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../ex_sandwich_condiments/.idea/runConfigurations.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../ex_sandwich_condiments/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../ex_sandwich_condiments/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../ex_sandwich_condiments/src/main/java/codegym/vn/bean/Condiment.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../ex_sandwich_condiments/src/main/java/codegym/vn/config/AppConfiguration.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../ex_sandwich_condiments/src/main/java/codegym/vn/config/AppInitializer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../ex_sandwich_condiments/src/main/java/codegym/vn/controller/CondimentController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../ex_sandwich_condiments/src/main/java/codegym/vn/repository/CondimentRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../ex_sandwich_condiments/src/main/java/codegym/vn/repository/ICondimentRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../ex_sandwich_condiments/src/main/java/codegym/vn/service/CondimentService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../ex_sandwich_condiments/src/main/java/codegym/vn/service/ICondimentService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../ex_sandwich_condiments/src/main/webapp/WEB-INF/view/condiment/result.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../ex_sandwich_condiments/src/main/webapp/index.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../ss1_spring_mvc/ex_dictionary/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/../../ss1_spring_mvc/ex_dictionary/build.gradle" afterDir="false" />
-    </list>
+    <list default="true" id="9181c58a-c6e4-49b0-b0a8-a1e302cb93bd" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -178,6 +146,7 @@
       <workItem from="1669636793471" duration="366000" />
       <workItem from="1669637170906" duration="1827000" />
       <workItem from="1669682825858" duration="871000" />
+      <workItem from="1669689624573" duration="33000" />
     </task>
     <servers />
   </component>

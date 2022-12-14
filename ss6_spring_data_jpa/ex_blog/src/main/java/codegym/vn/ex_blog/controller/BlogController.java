@@ -1,7 +1,7 @@
 package codegym.vn.ex_blog.controller;
 
 import codegym.vn.ex_blog.bean.Blog;
-import codegym.vn.ex_blog.service.IBlogService;
+import codegym.vn.ex_blog.service.IService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.*;
 @RequestMapping("")
 public class BlogController {
     @Autowired
-    IBlogService service;
+    IService service;
 
     @GetMapping({"list", ""})
     public String showList(Model model) {

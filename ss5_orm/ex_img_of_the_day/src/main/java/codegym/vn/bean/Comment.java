@@ -1,5 +1,7 @@
 package codegym.vn.bean;
 
+import org.springframework.format.annotation.DateTimeFormat;
+
 import javax.persistence.*;
 import java.util.Date;
 
@@ -12,12 +14,14 @@ public class Comment {
     private String feedback;
     @Column(name = "`like`")
     private int like;
+    @DateTimeFormat(pattern = "dd/MM/yyyy")
     private Date date;
 
     public Comment() {
+        this.date = new Date();
     }
 
-    public Comment(int id, String author, String feedback, int like, Date date) {
+    public Comment(int id, String author, String feedback, int like) {
         this.id = id;
         this.author = author;
         this.feedback = feedback;

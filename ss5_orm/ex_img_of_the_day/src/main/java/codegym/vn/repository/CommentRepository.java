@@ -6,6 +6,8 @@ import org.springframework.transaction.annotation.Transactional;
 
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.List;
 
@@ -17,8 +19,17 @@ public class CommentRepository implements ICommentRepository {
 
     @Override
     public List<Comment> findAll() {
-        return entityManager.createQuery("select c from Comment as c")
-                .getResultList();
+        SimpleDateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy");
+        dateFormat.setLenient(false);
+        String todayStr = dateFormat.format(new Date());
+        Date today = null;
+        try {
+            today = dateFormat.parse(todayStr);
+        } catch (ParseException e) {
+            e.printStackTrace();
+        }
+        return entityManager.createQuery("select c from Comment as c where c.date = :today")
+                .setParameter("today", today).getResultList();
     }
 
     @Override

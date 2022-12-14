@@ -8,9 +8,12 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 
 @Service
-public class BlogService implements IBlogService {
+public class BlogService implements IService<Blog> {
+    private IBlogRepository repository;
     @Autowired
-    IBlogRepository repository;
+    public BlogService(IBlogRepository repository) {
+        this.repository = repository;
+    }
 
     @Override
     public void save(Blog blog) {
@@ -29,8 +32,6 @@ public class BlogService implements IBlogService {
 
     @Override
     public Blog findById(int id) {
-//        MX-001
-        String stringId = "MX-011";
-        return repository.findById(Integer.valueOf(stringId.substring(3))).orElse(null);
+        return repository.findById(id).orElse(null);
     }
 }

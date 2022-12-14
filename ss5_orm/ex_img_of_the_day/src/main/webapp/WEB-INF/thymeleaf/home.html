@@ -27,7 +27,7 @@
 <body>
 <img id="img-of-the-day">
 <br>
-<select class="form-select" style="width: 20px" aria-label="Default select example">
+<select class="form-select" style="width: 60px" aria-label="Default select example">
     <option selected value="1">1</option>
     <option value="2">2</option>
     <option value="3">3</option>
@@ -40,7 +40,10 @@
         </tr>
         <tr>
             <td>Feedback:</td>
-            <td><input class="form-control" th:field="*{feedback}"></td>
+            <td>
+                <input class="form-control" th:field="*{feedback}">
+                <input type="hidden" th:field="*{date}">
+            </td>
         </tr>
         <tr>
             <td style="text-align: right">

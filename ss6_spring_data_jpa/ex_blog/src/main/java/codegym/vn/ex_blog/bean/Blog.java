@@ -1,6 +1,9 @@
 package codegym.vn.ex_blog.bean;
 
+import org.springframework.format.annotation.DateTimeFormat;
+
 import javax.persistence.*;
+import java.util.Date;
 
 @Entity(name = "blog")
 public class Blog {
@@ -13,15 +16,19 @@ public class Blog {
     @ManyToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "category_id", referencedColumnName = "id")
     private Category category;
+    @DateTimeFormat(pattern = "MM/dd/yyyy")
+    private Date createDate;
 
     public Blog(int id, String name, String content, Category category) {
         this.id = id;
         this.name = name;
         this.content = content;
         this.category = category;
+        this.createDate = new Date();
     }
 
     public Blog() {
+        this.createDate = new Date();
     }
 
     public int getId() {
@@ -54,5 +61,13 @@ public class Blog {
 
     public void setCategory(Category category) {
         this.category = category;
+    }
+
+    public Date getCreateDate() {
+        return createDate;
+    }
+
+    public void setCreateDate(Date createDate) {
+        this.createDate = createDate;
     }
 }

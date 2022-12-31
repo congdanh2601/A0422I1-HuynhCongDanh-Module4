@@ -30,9 +30,9 @@
     <div class="col-7">
         <h2>BLOG LIST</h2>
         <div class="col-lg-2" style="margin: 5px">
-            <a th:href="@{blog/create}" class="btn btn-primary" data-toggle="modal">Add New Blog</a>
+            <a th:href="@{/blog/create}" class="btn btn-primary" data-toggle="modal">Add New Blog</a>
         </div>
-        <h4 th:text="${mess}" style="color: red"></h4>
+        <h5 th:text="${mess}" style="color: red"></h5>
         <table class="table table-primary-100 table-striped table-bordered border-dark table-hover w-50">
             <thead>
             <tr>
@@ -52,13 +52,13 @@
                 <td class="px-4">
                     <div class="btn-group" role="group" aria-label="Basic mixed styles example">
                         <a th:href="@{/blog/detail(id=*{id})}">
-                            <button type="button" class="btn btn-sm btn-outline-success mx-1">Detail</button>
+                            <button type="button" class="btn btn-sm btn-success mx-1">Detail</button>
                         </a>
                         <a th:href="@{/blog/update(id=*{id})}">
-                            <button type="button" class="btn btn-sm btn-outline-primary mx-1">Edit</button>
+                            <button type="button" class="btn btn-sm btn-primary mx-1">Edit</button>
                         </a>
                         <a th:href="@{/blog/delete(id=*{id})}">
-                            <button type="button" class="btn btn-sm btn-outline-danger">Delete</button>
+                            <button type="button" class="btn btn-sm btn-danger">Delete</button>
                         </a>
                     </div>
                 </td>
@@ -71,11 +71,11 @@
         <div class="col-lg-2" style="margin: 5px">
             <a onclick="hideShowForm()" class="btn btn-primary" data-toggle="modal">Add New Category</a>
         </div>
-        <form th:object="${category}" action="category/create" style="display: none" method="post" id="create">
+        <form th:object="${category}" action="/category/create" style="display: none" method="post" id="create">
             <input type="text" th:field="*{name}" placeholder="Enter category name">
             <button type="submit" class="btn btn-success" style="margin-top: 15px">Save</button>
         </form>
-        <h4 th:text="${mess2}" style="color: red"></h4>
+        <h5 th:text="${mess2}" style="color: red"></h5>
         <table class="table table-primary-100 table-striped table-bordered border-dark table-hover w-50">
             <thead>
             <tr>
@@ -91,10 +91,10 @@
                 <td class="px-4">
                     <div class="btn-group" role="group" aria-label="Basic mixed styles example">
                         <a th:href="@{/category/update(id=*{id})}">
-                            <button type="button" class="btn btn-sm btn-outline-primary mx-1">Edit</button>
+                            <button type="button" class="btn btn-sm btn-primary mx-1">Edit</button>
                         </a>
                         <a th:href="@{/category/delete(id=*{id})}">
-                            <button type="button" class="btn btn-sm btn-outline-danger">Delete</button>
+                            <button type="button" class="btn btn-sm btn-danger">Delete</button>
                         </a>
                     </div>
                 </td>

@@ -10,7 +10,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
 @Controller
-@RequestMapping("blog")
+@RequestMapping({"blog", ""})
 public class BlogController {
     private IService blogService;
     private IService categoryService;
@@ -38,7 +38,9 @@ public class BlogController {
     @PostMapping("create")
     public String save(Model model, @ModelAttribute("blog") Blog blog) {
         blogService.save(blog);
+        model.addAttribute("category", new Category());
         model.addAttribute("list", blogService.findAll());
+        model.addAttribute("list2", categoryService.findAll());
         model.addAttribute("mess", "Blog saved.");
         return "list";
     }
@@ -46,6 +48,7 @@ public class BlogController {
     @GetMapping("update")
     public String save(Model model, @RequestParam("id") int id) {
         model.addAttribute("blog", blogService.findById(id));
+        model.addAttribute("categories", categoryService.findAll());
         return "create";
     }
 
@@ -58,8 +61,10 @@ public class BlogController {
     @GetMapping("delete")
     public String delete(Model model, @RequestParam("id") int id) {
         blogService.delete(id);
+        model.addAttribute("category", new Category());
         model.addAttribute("mess", "Blog deleted.");
         model.addAttribute("list", blogService.findAll());
+        model.addAttribute("list2", categoryService.findAll());
         return "list";
     }
 }

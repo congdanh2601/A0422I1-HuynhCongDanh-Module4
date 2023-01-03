@@ -9,4 +9,5 @@ public interface IService<E> {
     List<E> findAll();
     void delete(int id);
     E findById(int id);
+    List<E> findAllByCategory_Id(int id);
 }

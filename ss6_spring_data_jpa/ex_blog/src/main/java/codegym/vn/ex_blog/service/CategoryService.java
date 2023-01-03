@@ -34,4 +34,9 @@ public class CategoryService implements IService<Category> {
     public Category findById(int id) {
         return repository.findById(id).orElse(null);
     }
+
+    @Override
+    public List<Category> findAllByCategory_Id(int id) {
+        return null;
+    }
 }

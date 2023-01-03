@@ -34,4 +34,9 @@ public class BlogService implements IService<Blog> {
     public Blog findById(int id) {
         return repository.findById(id).orElse(null);
     }
+
+    @Override
+    public List<Blog> findAllByCategory_Id(int id) {
+        return repository.findAllByCategory_Id(id);
+    }
 }

@@ -39,4 +39,9 @@ public class CategoryService implements IService<Category> {
     public List<Category> findAllByCategory_Id(int id) {
         return null;
     }
+
+    @Override
+    public List<Category> findByName(String name) {
+        return null;
+    }
 }

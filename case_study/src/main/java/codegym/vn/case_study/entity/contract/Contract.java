@@ -24,13 +24,13 @@ public class Contract {
     private double contractDeposit;
     @Min(value = 1, message = "{totalMoney.min}")
     private double contractTotalMoney;
-    @ManyToOne(cascade = CascadeType.ALL)
+    @ManyToOne
     @JoinColumn(referencedColumnName = "employeeId")
     private Employee employeeId;
-    @ManyToOne(cascade = CascadeType.ALL)
+    @ManyToOne
     @JoinColumn(referencedColumnName = "customerId")
     private Customer customerId;
-    @ManyToOne(cascade = CascadeType.ALL)
+    @ManyToOne
     @JoinColumn(referencedColumnName = "serviceId")
     private Service serviceId;
     @OneToMany(mappedBy = "contractDetailId", fetch = FetchType.LAZY)

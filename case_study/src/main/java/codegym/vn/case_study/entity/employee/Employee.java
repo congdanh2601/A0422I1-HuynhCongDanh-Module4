@@ -27,16 +27,16 @@ public class Employee {
     @Pattern(regexp = "^[\\w-\\.]+@([\\w-]+\\.)+[\\w-]{2,4}$", message = "{email.format}")
     private String employeeEmail;
     private String employeeAddress;
-    @ManyToOne(cascade = CascadeType.ALL)
+    @ManyToOne
     @JoinColumn(referencedColumnName = "positionId")
     private Position positionId;
-    @ManyToOne(cascade = CascadeType.ALL)
+    @ManyToOne
     @JoinColumn(referencedColumnName = "educationDegreeId")
     private EducationDegree educationDegreeId;
-    @ManyToOne(cascade = CascadeType.ALL)
+    @ManyToOne
     @JoinColumn(referencedColumnName = "divisionId")
     private Division divisionId;
-    @ManyToOne(cascade = CascadeType.ALL)
+    @ManyToOne
     @JoinColumn(referencedColumnName = "username")
     private User username;
     @OneToMany(mappedBy = "employeeId", fetch = FetchType.LAZY)

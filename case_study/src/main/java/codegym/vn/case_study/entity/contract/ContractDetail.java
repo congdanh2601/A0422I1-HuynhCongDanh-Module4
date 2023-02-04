@@ -11,10 +11,10 @@ public class ContractDetail {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int contractDetailId;
-    @ManyToOne(cascade = CascadeType.ALL)
+    @ManyToOne
     @JoinColumn(referencedColumnName = "contractId")
     private Contract contractId;
-    @ManyToOne(cascade = CascadeType.ALL)
+    @ManyToOne
     @JoinColumn(referencedColumnName = "attachServiceId")
     private AttachService attachServiceId;
     @Min(value = 1, message = "{quantity.min}")

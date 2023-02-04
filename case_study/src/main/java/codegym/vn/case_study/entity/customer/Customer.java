@@ -15,16 +15,16 @@ public class Customer {
     @Column(length = 7)
     @Pattern(regexp = "^KH-[0-9]{4}$", message = "{customerId.format}")
     private String customerId;
-    @ManyToOne(cascade = CascadeType.ALL)
+    @ManyToOne
     @JoinColumn(referencedColumnName = "customerTypeId")
     private CustomerType customerType;
     private String customerName;
-    @DateTimeFormat(pattern = "dd/MM/yyyy")
+    @DateTimeFormat(pattern = "yyyy-MM-dd")
     private Date customerBirthday;
     private boolean customerGender;
     @Pattern(regexp = "^([0-9]{9}){1}([0-9]{3})?", message = "{idCard.format}")
     private String customerIdCard;
-    @Pattern(regexp = "^[0|(+84)]{1}9[0|1]{1}[0-9]{7}", message = "{phone.format}")
+    @Pattern(regexp = "^(0|\\(\\+84\\))9[01][0-9]{7}$", message = "{phone.format}")
     private String customerPhone;
     @Pattern(regexp = "^[\\w-\\.]+@([\\w-]+\\.)+[\\w-]{2,4}$", message = "{email.format}")
     private String customerEmail;
@@ -127,10 +127,5 @@ public class Customer {
 
     public void setContractList(List<Contract> contractList) {
         this.contractList = contractList;
-    }
-
-    @Override
-    public String toString() {
-        return "" + customerBirthday.getDate() + '/' + (customerBirthday.getMonth()+1) + '/' + (customerBirthday.getYear()+1900);
     }
 }
